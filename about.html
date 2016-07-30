@@ -43,32 +43,17 @@
 </div>
 
 <div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#E7BBF2">
-    <span class="sc">Hi, I'm Nandita! (Formerly nnaik39 on GitHub.)
-  </div>
-<div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#BBDDF2">
-    My interests include: data mining and appreciation, neural networks, probabilistic programming, graphics, watermelons,
-    complexity theory, math, music (all kinds!), databases, and saving the environment.
-</div>
-<div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#E7BBF2">
-    Quick explanation of everything: <br>
-      BrainExplorer is a graphics project developed to educate people about how the brain works! It's interactive and the
-      color scheme is pretty nice. It took a long time to code. The languages it uses are: JavaScript, WebGL, HTML, CSS.
-<div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#BBDDF2">
-    Other projects I have yet to opensource: <br>
-      A neural network which uses the Million Song Dataset to classify music. This is my most recent one, and I'll revise it
-      and opensource it once I can get it to classify audio. Languages: Python (although I started it in C++). <br>
-      An Arduino device which monitors temperature of sick people and connects to an Android app which then calls an emergency
-      number. Languages: Arduino, Android Studio. Can't opensource because hardware.
-  <div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#E7BBF2">
+  <h1>Genetic Algorithm to solve the Knapsack Problem</h1>
       (Repost from nanditanaik.wordpress.com)
       The knapsack problem is in optimization: given a set of N items, each with a weight and a value, what is the optimal subset of them which keeps the total weight under a fixed number and maximizes the total value? The name refers to a common problem in packing luggage, and this problem appears in a lot of different fields like cryptography and investments and portfolios.
 
-There are three types of the knapsack problem. The most common is the 0-1, where only one of each item in the set is provided. In this, the total number of subsets would be 2^n, and you must choose the optimal subset whose weight is under a value and whose total value is maximal.
+<br><br. There are three types of the knapsack problem. <br> The most common is the 0-1, where only one of each item in the set is provided. In this, the total number of subsets would be 2^n, and you must choose the optimal subset whose weight is under a value and whose total value is maximal.
 
-Another is the bounded knapsack problem, where the quantities of each item can be more than 1, but are restricted to a given value c. There is also an unbounded knapsack problem, where there is no upper limit on how much of an item can be in the knapsack. Both these problems have the same objective: maximize value, keep weight under a fixed value.
+<br>Another is the bounded knapsack problem, where the quantities of each item can be more than 1, but are restricted to a given value c. There is also an unbounded knapsack problem, where there is no upper limit on how much of an item can be in the knapsack. Both these problems have the same objective: maximize value, keep weight under a fixed value.
 
-There is a particularly interesting solution to the 0-1 problem called the genetic algorithm. This optimization algorithm is inspired by evolution. Basically, the “population” is a random initialization of problem solutions. A fitness function evaluates the quality of the individuals, and then a parent selection takes place. Then the offspring is “mutated”.
+<br>There is a particularly interesting solution to the 0-1 problem called the genetic algorithm. This optimization algorithm is inspired by evolution. Basically, the “population” is a random initialization of problem solutions. A fitness function evaluates the quality of the individuals, and then a parent selection takes place. Then the offspring is “mutated”.
 
-How can this solve the 0-1 knapsack problem? We can represent every possible solution with a binary string. Then we pick two at random out of the population, and choose the better one. This one will generate offspring, and a random calculation will determine whether the offspring is mutated. Then survivors are selected. This algorithm terminates if there was no improvement over the last 25 generations.    </div>
+<br> How can this solve the 0-1 knapsack problem? We can represent every possible solution with a binary string. Then we pick two at random out of the population, and choose the better one. This one will generate offspring, and a random calculation will determine whether the offspring is mutated. Then survivors are selected. This algorithm terminates if there was no improvement over the last 25 generations.</div>
+  </div>
     </body>
   </html>
