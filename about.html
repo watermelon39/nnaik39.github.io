@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
   <head>
@@ -62,6 +61,23 @@
 <br>There is a particularly interesting solution to the 0-1 problem called the genetic algorithm. This optimization algorithm is inspired by evolution. Basically, the “population” is a random initialization of problem solutions. A fitness function evaluates the quality of the individuals, and then a parent selection takes place. Then the offspring is “mutated”.
 
 <br> How can this solve the 0-1 knapsack problem? We can represent every possible solution with a binary string. Then we pick two at random out of the population, and choose the better one. This one will generate offspring, and a random calculation will determine whether the offspring is mutated. Then survivors are selected. This algorithm terminates if there was no improvement over the last 25 generations.</div>
+  </div>
+  <div class="centered">
+    On Zero-Knowledge Proofs
+
+In the world of elementary school, or at least my elementary school, friendships were forged and broken by the trust-fall test. Basically, you'd fall backwards onto the person and if the person caught you, they were trustworthy. Else they'd step aside and let you fall. Which happened to me a grand total of three times.
+
+In this scenario, the person who you're falling onto has some information that you do not: whether they're going to catch you. All this up till now has been about you not trusting the person, but what if your fellow kindergartener doesn't trust you, and also doesn't want you to gain any extra information?
+
+This is an example of an interactive proof system, where you have two parties: the Prover, and the Verifier. The Prover wants to convince the Verifier that a mathematical statement is true (namely that he trusts you), or at least has a trivially low probability of being wrong. You are the Verifier, and the person you fall onto is the Prover. What if you can't trust the Prover? Or, more oddly, what if the Prover doesn't trust you?
+
+The five-year-old that you then fell onto might use something called a zero-knowledge proof. It's purpose is to minimize information leakage. After the prover has made his proof to you, you will know something is right but you will not have gained any extra information from the process of the proof.
+
+Look here for an example: http://blog.cryptographyengineering.com/2014/11/zero-knowledge-proofs-illustrated-primer.html.
+
+How might such a proof work in this case? Is a zero-knowledge proof even possible? (I'm not quite sure.)
+
+Updates in a week!
   </div>
     </body>
   </html>
