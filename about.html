@@ -23,8 +23,6 @@
                 <script src="js/OrbitControls.js"></script>
                 <script src="js/jquery.js"></script>
                 <script src="https://raw.github.com/sole/tween.js/master/build/tween.min.js"></script>
-
-
   </head>
 
   <body>
@@ -41,10 +39,6 @@
   </div>
 </div>
 
-<div class="centered" id = "whoami" style="font-family: Times New Roman; background-color:#E7BBF2">
-  Will Code for Food
-</div>
-
 <div class="centered" style="font-family: Times New Roman; display:none" id="firstpost" style="display:none">
 
   Genetic Algorithm to solve the Knapsack Problem
@@ -59,14 +53,20 @@
 
 <br> How can this solve the 0-1 knapsack problem? We can represent every possible solution with a binary string. Then we pick two at random out of the population, and choose the better one. This one will generate offspring, and a random calculation will determine whether the offspring is mutated. Then survivors are selected. This algorithm terminates if there was no improvement over the last 25 generations.</div>
   </div>
-  <input type="button" name="answer" value="Technical" onclick="showDiv()" style="display:block; margin:auto; margin-top:100px"/>
+  <input type="button" name="answer" value="Technical" onclick="showTechnical()" style="display:block; margin:auto; margin-top:100px"/>
+  <input type="button" name="answer" value="Cryptography" onclick="showCryptography()" style="display:block; margin:auto; margin-top:100px"/>
 
 <script>
-function showDiv() {
+function showTechnical() {
    document.getElementById('firstpost').style.display = "block";
 }
+
+function showCryptography() {
+   document.getElementById('secondpost').style.display = "block";
+}
+
 </script>
-  <div class="centered">
+  <div class="centered" id="secondpost" style:"display:none">
     On Zero-Knowledge Proofs
 
 In the world of elementary school, or at least my elementary school, friendships were forged and broken by the trust-fall test. Basically, you'd fall backwards onto the person and if the person caught you, they were trustworthy. Else they'd step aside and let you fall. Which happened to me a grand total of three times.
