@@ -56,4 +56,26 @@
   data from audio signals.
   </div>
     </body>
+    <div class="centered" style="font-family: Times New Roman">
+    How can machines understand music?
+For my independent project freshman year, I wanted to see if a machine could learn how to classify songs. This could be used as a recommendation system for music streaming services such as Spotify. I developed a neural network that classifies different types of music into seven genres: rock, hip-hop, pop, classical, blues, country, and jazz. The network analyzes just over 300 songs extracted from the Million Songs Dataset, and it uses the loudness, key, time signature, tempo, and mode to put each song into a category. It isn’t terribly accurate (60%), and my computer freezes when I run it--but hey, it’s a learning experience, right? 
+In this write-up, I will explore this problem, why neural networks are good for modeling people’s tastes, how they work and why I think artificial intelligence will never be truly independent.
+If we’re talking about people, how someone understands music varies according to their personality, history, and loads of other factors. For example, someone born in the 1980’s may classify Avril Lavigne songs as alternative rock, while someone born in the 2000’s may think it is punk. This reflects how they learned about music in the first place.
+Neural networks are interesting because they model the learning process. We don’t tell the network what is the difference between a rap song and a hip-hop. Instead, the neural network figures it out on its own via a trial-and-error method: making a hypothesis, double-checking, and adjusting the weights and running its inputs through the net until it’s satisfied with its results using calculus. It’s how I used to learn as a child, jumping off tables until I determined just how painful it was, touching, feeling, exploring the world and drawing my own conclusions. There’s something adorable about a computer being creative, like a dolphin painting with a brush in its mouth.
+	Now for the technical part! I used a supervised learning algorithm to train a two-layer neural net: the output from the first layer was the input for the second layer. The second layer then produced an output of the song’s probability of belonging to each class, which was double-checked with the correct answer. (In an unsupervised learning model, the net wouldn’t know the correct answer.) The overall motive for the neural net is to find a function which will reliably take the input X to the correct output Y. Below is a diagram showing the different functions I used.
+*insert pic*
+
+First in goes the input. This is a set of features: loudness, key, time signature, tempo, and mode. These features are unique for each song and are what are being used to put it in one of seven genres.
+The first layer is called a ReLU, or a Rectified Linear Unit. My reason for adding it in here is to introduce nonlinearity into our function predictions. If the function that we are trying to predict was linear, then we would not need this. The ReLU takes in a set of features, and for each feature x outputs f(x) = max(weight_of_feature * x + b, 0). The weight of feature is randomized at first, then adjusted later on. The graph is as shown below:
+
+
+Notice how similar this is to the graph f = e^x!
+So the output from the ReLU then is inputted into the softmax layer. 
+
+What this does is take your feature set and output a matrix of the probailities of your song belonging to each class, so in this case it would output a 7 x 1 matrix. It’s a generalization of logistic regression, if you’ve heard of that before. If you want to go more in depth, here is a good link which mathematically explains softmax regression: http://ufldl.stanford.edu/tutorial/supervised/SoftmaxRegression/.
+
+After your input has completed the neural network, you look at your 7 x 1 matrix and choose the class with the highest probability. Then you look at the actual answer! You probably won’t get it right on the first time, so use a cost function to compute the error between your answer and the right one. Then we use calculus to propagate that error back through the layer and adjust the weights in each layer accordingly. (This is called backpropagation.)
+I think the most difficult part of machine learning is choosing the right data to put into your feature set. For example, suppose you want to classify plants to divide them into different beds. If you used something like color, that may not be too useful, right? However, if you used features like soil conditions, or maybe the right time of the year for planting, then your results might be a little more optimal for the task you’re attempting. This is the reason why I think humans are never going to completely disappear from the scene of machine learning; prioritizing data is very important and can, at this point, only be done by humans. So don’t worry, we are never going to be taken over by AIs (I think), love, peace, chicken grease, and all that!
+  </div>
+
   </html>
