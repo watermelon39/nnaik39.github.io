@@ -69,7 +69,9 @@ Neural networks are interesting because they model the learning process. We donâ
 First in goes the input. This is a set of features: loudness, key, time signature, tempo, and mode. These features are unique for each song and are what are being used to put it in one of seven genres.
 The first layer is called a ReLU, or a Rectified Linear Unit. My reason for adding it in here is to introduce nonlinearity into our function predictions. If the function that we are trying to predict was linear, then we would not need this. The ReLU takes in a set of features, and for each feature x outputs f(x) = max(weight_of_feature * x + b, 0). The weight of feature is randomized at first, then adjusted later on. The graph is as shown below:
 
+	    <img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px;">
 
+	    
 Notice how similar this is to the graph f = e^x!
 So the output from the ReLU then is inputted into the softmax layer. 
 
