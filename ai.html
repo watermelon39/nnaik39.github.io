@@ -64,12 +64,10 @@ In this write-up, I will explore this problem, what I learned from it and why I 
 If we’re talking about people, how someone understands music varies according to their personality, history, and loads of other factors. For example, someone born in the 1980’s may classify Avril Lavigne songs as alternative rock, while someone born in the 2000’s may think it is punk. This reflects how they learned about music in the first place.
 Neural networks are interesting because they model the learning process. We don’t tell the network what is the difference between a rap song and a hip-hop. Instead, the neural network figures it out on its own via a trial-and-error method: making a hypothesis, double-checking, and adjusting the weights and running its inputs through the net until it’s satisfied with its results using calculus. It’s how I used to learn as a child, jumping off tables until I determined just how painful it was, touching, feeling, exploring the world and drawing my own conclusions. There’s something adorable about a computer being creative, like a dolphin painting with a brush in its mouth.
 	Now for the technical part! I used a supervised learning algorithm to train a two-layer neural net: the output from the first layer was the input for the second layer. The second layer then produced an output of the song’s probability of belonging to each class, which was double-checked with the correct answer. (In an unsupervised learning model, the net wouldn’t know the correct answer.) The overall motive for the neural net is to find a function which will reliably take the input X to the correct output Y. Below is a diagram showing the different functions I used.
-*insert pic*
+	    <img src="Music Classifier Neural Network.jpg" alt="Mountain View" style="width:304px;height:228px;">
 
 First in goes the input. This is a set of features: loudness, key, time signature, tempo, and mode. These features are unique for each song and are what are being used to put it in one of seven genres.
 The first layer is called a ReLU, or a Rectified Linear Unit. My reason for adding it in here is to introduce nonlinearity into our function predictions. If the function that we are trying to predict was linear, then we would not need this. The ReLU takes in a set of features, and for each feature x outputs f(x) = max(weight_of_feature * x + b, 0). The weight of feature is randomized at first, then adjusted later on. The graph is as shown below:
-
-	    <img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px;">
 
 	    
 Notice how similar this is to the graph f = e^x!
